@@ -1,0 +1,26 @@
+[build-system]
+requires = ['setuptools', 'setuptools_scm', 'wheel']
+build-backend = 'setuptools.build_meta'
+
+[project]
+name="backend"
+dependencies = ["fastapi[all]"]
+dynamic = ['version']
+
+[tool.setuptools_scm]
+write_to = "src/backend/_version.py"
+
+[tool.setuptools.dynamic]
+version = {attr="backend._version.version"}
+
+[tool.isort]
+force_single_line = true
+
+[tool.mypy]
+ignore_missing_imports = true
+
+[tool.black]
+line-length = 79
+
+[tool.ruff]
+line-length = 79
