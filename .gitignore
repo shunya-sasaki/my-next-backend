@@ -2,6 +2,7 @@
 **/__pycache__
 **/_version.py
 **/.ipynb_checkpoints
+**/**.egg-info
 /.vscode
 /.venv
 /.env
